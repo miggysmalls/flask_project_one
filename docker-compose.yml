@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  dynamo-local:
+    ports:
+      - 8000:8000
+    image: amazon/dynamodb-local
