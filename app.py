@@ -1,11 +1,15 @@
-from flask import Flask
-from flask import request
+from flask import Flask, request, redirect, url_for, render_template
 from requests import codes
 from time import time_ns
 from os import walk
 from json import dumps, loads
 app = Flask(__name__)
 headers = {'Content-Type': 'application/json'}
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('index.html')
 
 
 @app.route('/health-check', methods=['GET'])
