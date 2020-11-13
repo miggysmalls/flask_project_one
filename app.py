@@ -8,6 +8,7 @@ app = Flask(__name__)
 headers = {'Content-Type': 'application/json'}
 
 
+@app.route('/', methods=['GET'])
 @app.route('/health-check', methods=['GET'])
 def default_page():
     message = {
@@ -17,4 +18,4 @@ def default_page():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='5000', debug=True)
+    app.run(host='192.168.1.100', port='5000', debug=True)
