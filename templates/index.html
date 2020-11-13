@@ -1,10 +1,6 @@
-<!doctype html>
-<html>
-    <head>
-        <title>The Pissing Clear Onion</title>
-    </head>
-    <body>
-	<h1>You have arrived!</h1>
-	<p>Learn about stuff!</p>
-    </body>
-</html>	
+{% extends "base.html" %}
+{% block title %}Home of the Pissing Clear Onion{% endblock %}
+{% block content %}
+<h1>Static TEXT</h1>
+<image src="{{ url_for('static', filename='images/nug.jpg') }}">
+{% endblock %}
