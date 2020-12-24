@@ -7,10 +7,9 @@ app = Flask(__name__)
 headers = {'Content-Type': 'application/json'}
 
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET']) 
 def home():
     return render_template('index.html')
-
 
 @app.route('/health-check', methods=['GET'])
 def default_page():
