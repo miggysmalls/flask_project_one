@@ -1,4 +1,5 @@
 #!/bin/bash
 export FLASK_APP=app.py
 export FLASK_ENV=development
-python -m flask run -h 192.168.1.100
+hostname -i
+python -m flask run -h $?
